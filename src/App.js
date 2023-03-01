@@ -1,7 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+import React from 'react'
+import Navbareq from './components/navbareq'
+//import Navbar from './components/navbar'
+import './css/style.css'
+
+
 
 function App() {
+  return (
+    <div>
+       {/* <Navbar></Navbar> */}
+       <Navbareq></Navbareq>
+    </div>
+  )
+}
+
+
+export default App
+
+
+
+
+
+
+/* function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,11 +38,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Raquel
         </a>
       </header>
     </div>
   );
 }
 
-export default App;
+export default App; */

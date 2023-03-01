@@ -1,0 +1,25 @@
+ @media screen and (min-width:768px) {
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 8vh;
+        background: rgb(134, 134, 250);
+      }
+
+    .nav__toggler{
+    display: none;
+   } 
+
+   .nav__menu{
+    display: flex;
+    position: inherit;
+    width: 0;
+    height: 0;
+    gap: 5rem;  
+    flex-direction: row;
+
+  }
+
+
+} 
