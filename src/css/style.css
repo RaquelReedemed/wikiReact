@@ -1,8 +1,7 @@
-*::before {
-  margin: 0;
-  box-sizing: border-box;
-}
-
+/* *::before {
+    margin: 0;
+    box-sizing: border-box;
+} */
 html {
   font-size: 62.5%;
 }
@@ -11,67 +10,6 @@ body {
   font-size: 1.6rem;
 }
 
-/*
-li{
-  list-style: none;
-}
-
-a{
-  text-decoration: none;
-  color: #626161;
-}
-
-.nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 8vh;
-  background: #8686fa;
-}
-
-.nav__brand{
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-/* .nav__menu{
-  display: flex;
-  //align-items: center;
- // justify-content: space-around;
-  gap: 3rem;
-  display: none;
-} */
-/* .nav__menu{
-  display: flex;
-  position: fixed;
-  top: 5vh;
-  right: 0;
-  width:100%;
-  height: 95vh;
-  background: #8686fa;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-
-}
-
-.nav__active {
-  transform: translateX(100%); //se oculta de toda la pantalla
-}
-
-.nav__toggler div{
-  width: 2.5rem;
-  height: 0.2rem;
-  margin: 0.4rem;
-  background: #626161;
-
-}
-
-.nav__toggler {
-  cursor: pointer;
-  display: block;
-} */
 .navLogo {
   width: 100px;
 }
@@ -86,6 +24,7 @@ a{
 
 .navLi a {
   text-decoration: none;
+  color: black;
 }
 
 .nav {
@@ -107,33 +46,50 @@ a{
   justify-content: space-evenly;
   align-items: center;
   background-color: rgb(158, 158, 245);
+  transition: 0.5s ease-in;
+  transform: translateX(100%);
 }
 
 .navUl div {
   width: 294px;
   height: 67px;
   outline: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 8vh;
-    background: rgb(134, 134, 250);
-  }
-  .nav__toggler {
+.navActive {
+  transform: translateX(0%);
+}
+
+.navToggler {
+  cursor: pointer;
+  display: block;
+}
+
+/*    @media screen and (min-width:768px) {
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 8vh;
+        background: rgb(134, 134, 250);
+      }
+
+    .nav__toggler{
     display: none;
-  }
-  .nav__menu {
+   } 
+
+   .nav__menu{
     display: flex;
     position: inherit;
     width: 0;
     height: 0;
-    gap: 5rem;
+    gap: 5rem;  
     flex-direction: row;
+
   }
-}
+} */
 
 /*# sourceMappingURL=style.css.map */

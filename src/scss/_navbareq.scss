@@ -13,6 +13,7 @@
 
 .navLi a {
     text-decoration: none;
+    color: black;
 }
 
 .nav{
@@ -24,6 +25,7 @@
 }
 
 .navUl{
+    //display: none;
     display: flex;
     position: fixed;
     top: 5vh;
@@ -34,10 +36,24 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: rgb(158, 158, 245);
+    transition: 0.5s ease-in;
+    transform: translateX(100%)
 }
 
 .navUl div{
     width: 294px;
     height: 67px;
     outline: 1px solid gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .navActive {
+    transform: translateX(0%); //is used to move the element horizontally along the x-axis.
+  }  
+
+.navToggler {
+    cursor: pointer;
+    display: block;
 }
