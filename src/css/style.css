@@ -50,6 +50,10 @@ body {
   transform: translateX(100%);
 }
 
+.navUl li {
+  list-style: none;
+}
+
 .navUl div {
   width: 294px;
   height: 67px;
