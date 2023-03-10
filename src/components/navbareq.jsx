@@ -54,7 +54,6 @@ function Navbareq() {
   
   return (
     <nav className='nav'>
-    <div className='navLogo'><a  href='#'><img src='https://res.cloudinary.com/da5fzpyjp/image/upload/v1677629421/wiki/logo1_lchefc.jpg' alt='logo'></img></a></div>
 
         <ul className={active} >
     
@@ -62,7 +61,7 @@ function Navbareq() {
         category.map((categorias, i)=>{
 
           return(
-           <div><li key={i}>{categorias}</li></div>
+           <div> <li key={i}>{categorias}</li></div>
           )
         })
       }
@@ -72,12 +71,18 @@ function Navbareq() {
      <li>
       categorias={categorias}
      </li>
-        {datos?.map((user) => 
+        {datos?.map((user) =>  // '?',se utiliza para evitar errores de que datos sea null 
       (<li className='navLi' key={user.id}>{user.categoria}</li>))}  
      </ul> */}
      <div onClick={navHamb} className='navToggler'>
-     <i class="bi bi-grid-3x3-gap-fill"></i>
+     <div className= "line1"></div>
+     <div className= "line2"></div>
+     <div className= "line3"></div>
+     {/* <i class="bi bi-grid-3x3-gap-fill"></i> */}
      </div>
+
+     <div className='navLogo'><a  href='#'><img src='https://res.cloudinary.com/da5fzpyjp/image/upload/v1678473595/wiki/logo_modoClaroMOBY_vlfjfi.jpg' alt='logo'></img></a></div>
+
     </nav> 
   )
 }

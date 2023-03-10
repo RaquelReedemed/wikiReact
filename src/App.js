@@ -2,6 +2,7 @@
 //import './App.css';
 import React from 'react'
 import Navbareq from './components/navbareq'
+import Search from './components/search'
 //import Navbar from './components/navbar'
 import './css/style.css'
 
@@ -12,6 +13,7 @@ function App() {
     <div>
        {/* <Navbar></Navbar> */}
        <Navbareq></Navbareq>
+       <Search></Search>
     </div>
   )
 }
