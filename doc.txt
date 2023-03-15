@@ -1,0 +1,11 @@
+                                      NAVBAR 
+Se uso la clase nav de bootstrap y resto de los elementos dentro de una lista UL.
+   -Toggle Menu, se hizo uso del Hook useState para visibilizar el menu 'navHamb'. El operados ternario '?' verifica si la variable 'active' es igual a 'navUl' o no, de ser igual activa la clase CSS que muestra el menu desplegado con la funcion 'set'.
+        El cambio de estado se hace cuando se hace click en el boton 'navToggler' la cual es llamada por un onClick
+
+   -Renderizado de categorias API: Se hizo uso de la libreria AXIOS y el HOOK useEffect.
+
+
+
+   
+

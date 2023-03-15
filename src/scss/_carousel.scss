@@ -1,0 +1,30 @@
+.rec-carousel-item{
+    display: flex;
+    align-items: center;
+}
+
+//control con puntos para pasar slice
+.birLPp{
+    display: none !important;
+}
+
+.item{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cajas {
+    background-color: #c5c0c0;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.carousel{
+    margin-top: 15px;
+}
+
+//botones
+
+

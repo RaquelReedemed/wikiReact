@@ -1,9 +1,10 @@
 //import logo from './logo.svg';
 //import './App.css';
 import React from 'react'
+import Carouseleq from './components/carouseleq'
 import Navbareq from './components/navbareq'
 import Search from './components/search'
-//import Navbar from './components/navbar'
+
 import './css/style.css'
 
 
@@ -11,14 +12,12 @@ import './css/style.css'
 function App() {
   return (
     <div>
-       {/* <Navbar></Navbar> */}
        <Navbareq></Navbareq>
        <Search></Search>
+       <Carouseleq></Carouseleq>
     </div>
   )
 }
-
-
 export default App
 
 
