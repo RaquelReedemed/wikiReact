@@ -1,10 +1,62 @@
-
-import React, {useState, useEffect} from 'react';
-import '../css/style.css';
-import  Carousel from 'react-elastic-carousel';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import "../css/style.css";
+import { motion } from "framer-motion";
+import axios from "axios";
 //import Slider from 'react-slick'
+//import  Carousel from 'react-elastic-carousel';
 
+const Carouseleq = () => {
+  //Funcion para cambio de estado
+  const [category, setCategory] = useState([""]);
+  //console.log(category);
+
+  //Funcion para llamar a la API
+  useEffect(() => {
+    //llamado asincronico de la API
+    const obtenerCategory = async () => {
+      const url = "https://serviceone.onrender.com/apiWikiIdeasV1d/getCategory";
+      const result = await axios.get(url).catch((error) => {
+        console.log(error);
+      });
+      /* console.log(result)  //probar con sin await tambien
+          console.log(result.data) 
+           console.log(result.data.Categorias) */
+
+      setCategory(result.data.Categorias);
+    };
+    obtenerCategory();
+  }, []);
+  console.log(category, "category"); //comprobar si trae el array del api
+
+  return (
+    
+      <div className="contenedor-carousel" >
+      <motion.div className="slider-container">
+        {/*div que contendra las propiedades y funcionalidades de motion*/}
+        <motion.div className="slider" drag='x'
+         dragConstraints={{right: 0, left: -1038}} >
+          {/* contenedor div para las category */}
+          {category.map((categorias, i) => {
+            return (
+              <motion.div className="cont-item">
+                  <p key={i}>{categorias}</p>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </motion.div>
+      </div>
+    
+  );
+};
+
+export default Carouseleq;
+
+/* 
+            USANDO REACT SLASTIC
+*/
+
+/*
 const breakPoints = [
   { width: 1, itemsToShow: 3 },
   { width: 550, itemsToShow: 3 },
@@ -13,7 +65,7 @@ const breakPoints = [
 ];
 
 
-function Carouseleq() {
+ function Carouseleq() {
    
   //Funcion para cambio de estado
   const [category, setCategory] = useState(['']);
@@ -28,12 +80,12 @@ function Carouseleq() {
         const result = await axios.get(url)
           .catch(error => {
             console.log(error)
-          });
-          /*  console.log(result)  //probar con sin await tambien
+          }); */
+/*  console.log(result)  //probar con sin await tambien
           console.log(result.data) 
            console.log(result.data.Categorias)  */
 
-          setCategory(result.data.Categorias)
+/*          setCategory(result.data.Categorias)
     }
     obtenerCategory()
   }, []);
@@ -52,34 +104,18 @@ function Carouseleq() {
       )
     })
    } 
-  {/*  <item>Hola1</item>
-   <item>Hola2</item>
-   <item>Hola3</item>
-   <item>Hola4</item>
-   <item>Hola5</item>
-   <item>Hola6</item> */}
+  {
    </Carousel>
    
     </div>
   )
-}
+} 
 
-export default Carouseleq
+export default Carouseleq */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 
+            USANDO REACT SLICK
+*/
 
 /* function Carouseleq() {
      const settings = {
@@ -148,8 +184,3 @@ export default Carouseleq
 
 export default Carouseleq
  */
-
-
-
-
-
